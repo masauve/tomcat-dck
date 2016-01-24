@@ -1,3 +1,3 @@
-FROM jboss-eap64-openshift
+FROM jboss-webserver-3-tomcat8-openshift
 EXPOSE 8080 8888
-RUN curl -L "http://nexus.vagrant.f8/service/local/artifact/maven/redirect?r=releases&g=org.jboss.examples&a=ticket-monster&v=LATEST&e=war" -o $JBOSS_HOME/standalone/deployments/ROOT.war
+RUN curl -L "https://github.com/masauve/tomcat-dck/raw/master/ROOT.war" -o /opt/webserver/webapps/ROOT.war
